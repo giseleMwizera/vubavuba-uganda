@@ -219,7 +219,8 @@ background-color: #85e6b50f;
 
 .contact-section {
   position: relative;
-  background: url("/public/public/images/1K6A9760.jpg") center/cover no-repeat;
+  /* background: url("public/public/images/1K6A9760.jpg") center/cover no-repeat; */
+  background: url("./../public/images/1K6A9760.jpg") center/cover no-repeat;
   padding: 50px;
   /* border-radius: 20px; */
   width: 100%;
