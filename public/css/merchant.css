@@ -45,3 +45,36 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
+
+
+        .upload-btn {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px;
+            background-color: #008f43b0;
+            color: white !important;
+            margin-top: 1em;
+            padding: 8px 26px !important;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 15px !important;
+            font-weight: bold !important;
+            border: none;
+            outline: none;
+            transition: background 0.3s ease;
+            width: 40% !important;
+        }
+
+        .upload-btn:hover {
+            background-color: #008f43;
+        }
+
+        .upload-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .file-input {
+            display: none;
+        }

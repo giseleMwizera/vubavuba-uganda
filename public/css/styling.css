@@ -1,3 +1,4 @@
+
 .why-section {
   display: flex;
   background-color: #85e6b50f;
@@ -230,7 +231,12 @@ background-color: #85e6b50f;
   align-items: center;
   overflow: hidden;
 }
-.merchant .contact-section {
+.rider .contact-section {
+
+  background: url("./../public/images/1K6A9336.jpg") center/cover no-repeat;
+  
+}
+.rider .contact-section, .merchant .contact-section {
    margin: 0 auto;
 }
 
@@ -245,7 +251,7 @@ background-color: #85e6b50f;
   z-index: 1;
 }
 
-.merchant .contact-section::before {
+.rider .contact-section::before ,.merchant .contact-section::before {
   background: rgba(0, 0, 0, 0.208);
 }
 
@@ -257,20 +263,25 @@ background-color: #85e6b50f;
   width: 90%;
   align-items: center;
 }
-.merchant .contact-section .contact-container {
+.rider .contact-section .contact-container , .merchant .contact-section .contact-container {
   flex-wrap: nowrap;
   width: 100%;
 padding-top: 3em;
 }
 
-.merchant .contact-section .company-registration {
-  flex: 0.6;
-  padding: 40px;
+.merchant .contact-section .company-registration, .rider .contact-section .company-registration {
+  flex: 0.4;
+  padding: 30px 20px;
   background: #ffffff;
   /* border-radius: 0 15px 15px 0; */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   z-index: 200;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin-top: 3em;
+
 }
 
 .contact-section .contact-text .section__info-button {
@@ -280,7 +291,10 @@ padding-top: 3em;
 }
 
 .merchant .contact-section .contact-text h2,
-.merchant .contact-section .contact-text p {
+.rider .contact-section .contact-text h2,
+.rider .contact-section .contact-text p, 
+.merchant .contact-section .contact-text p 
+{
   width: 70%;
 }
 .contact-section .contact-text {
@@ -510,8 +524,7 @@ padding-top: 3em;
   z-index: 1000;
 }
 
-.modal-register .modal-content,
-.company-registration {
+.modal-register .modal-content{
   background: white;
   width: 90%;
   max-width: 700px;
@@ -571,12 +584,15 @@ padding-top: 3em;
 
 .company-registration h2 {
   color: #008f42;
-  padding: 15px;
+  padding: 10px 10px 30px 0px !important;
   text-align: center;
-  font-weight: 800;
+  /* background-color: rebeccapurple; */
+  font-weight: 700;
 }
 .company-registration .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .company-registration .form-group label {
@@ -587,15 +603,17 @@ padding-top: 3em;
 }
 
 .company-registration .form-group input,
+.company-registration .form-group select,
 .company-registration .form-group textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 3px;
   font-size: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s;
 }
+
 
 .company-registration .form-group input:focus,
 .company-registration .form-group textarea:focus {
@@ -603,24 +621,24 @@ padding-top: 3em;
   outline: none;
 }
 
-.company-registration .form-group input[type="file"] {
-  padding: 5px;
-}
 
 .company-registration .form-group textarea {
   resize: none;
   height: 100px;
 }
-
+.company-registration  .submit {
+    display: flex;
+ justify-content: center;
+}
 .company-registration button.submit-btn {
-  width: 40%;
-  padding: 12px;
+  width: 30%;
+  padding: 10px;
   background: #00a34d;
 
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 3px;
+  font-size: 14px;
   cursor: pointer;
   font-weight: bold;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -855,7 +873,7 @@ padding-top: 3em;
 .tab-container {
   width: 80vw;
   margin: auto;
-    background: #008f42;
+    background: #008f43bf;
     color: white;
   border-radius: 10px;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -1019,6 +1037,8 @@ font-size: 2.5em;
     width: 90%;
   }
   .merchant .contact-section .contact-text h2,
+  .rider .contact-section .contact-text h2,
+  .rider .contact-section .contact-text p ,
   .merchant .contact-section .contact-text p {
     width: 100%;
   }
@@ -1105,6 +1125,7 @@ font-size: 2.5em;
     flex-direction: column;
   }
 
+  .rider .contact-section::before,
   .merchant .contact-section::before {
     background: rgba(0, 0, 0, 0) !important;
   }
