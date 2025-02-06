@@ -35,6 +35,17 @@ input {
   width: 100%;
 }
 
+
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    display: none; 
+}
+
+
 [type="text"],
 input:where(:not([type])),
 [type="email"],

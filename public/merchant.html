@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>VUBAVUBA - Uganda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/x-icon" href="./public/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/font.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/components.css" />
+    <link rel="stylesheet" type="text/css" href="./css/new.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Home.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styling.css" />
+    <link rel="stylesheet" type="text/css" href="./css/merchant.css" />
+    <script>
+      async function handleSlider() {
+        const slider = document.querySelector("#slider");
+
+        const imageList = slider.querySelectorAll("img");
+        const onLoadPromiseList = [];
+        for (const image of imageList) {
+          if (image.complete) continue;
+
+          const onLoadPromise = new Promise((resolve, reject) => {
+            if (image.complete) return resolve();
+            image.onload = resolve;
+            image.onerror = resolve;
+          });
+          onLoadPromiseList.push(onLoadPromise);
+        }
+        await Promise.all(onLoadPromiseList);
+
+        // Set max width and height to prevent slider from overflowing
+        slider.style.maxWidth = getComputedStyle(slider).width;
+        slider.style.maxHeight = getComputedStyle(slider).height;
+
+        const sliderParent = slider.parentElement;
+        const sliderTrack = document.querySelector("#slider > .swiper-wrapper");
+        const slides = document.querySelectorAll(
+          "#slider > .swiper-wrapper > .swiper-slide"
+        );
+
+        // Clone slides for infinite loop
+        const slidesToShow = 3;
+        const slidesRequired = 6;
+        for (
+          let i = 0;
+          slides.length <= slidesToShow && i <= slidesRequired - 1;
+          i++
+        ) {
+          const index = i % slidesToShow;
+          const clone = slides[index]?.cloneNode(true);
+          clone?.setAttribute("cloned", "");
+          sliderTrack?.appendChild(clone);
+        }
+
+        const swiper = new Swiper("#slider", {
+          grabCursor: true,
+          loop: true,
+          slidesOffsetAfter: 0,
+          slidesOffsetBefore: 0,
+          slidesPerView: 3,
+          navigation: {
+            prevEl: "#slider-control-prev",
+            nextEl: "#slider-control-next",
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            551: { slidesPerView: 1 },
+            1051: { slidesPerView: 3 },
+          },
+        });
+      }
+
+      /**
+       * Hydrate slider #slider
+       */
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          await handleSlider();
+        } catch (error) {
+          console.error(error);
+        }
+      });
+    </script>
+    <script type="module" src="./js/index.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="public/images/img_vvlogo_2_1.png"
+          alt="Logo Image"
+          class="header__logo"
+        />
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="index.html#download" class="nav-link">Download</a></li>
+        <li><a href="index.html#discover" class="nav-link">Discover</a></li>
+        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="merchant">
+      <section class="contact-section" id="contact">
+        <div class="contact-container">
+          <div class="contact-text">
+            <button class="section__info-button">
+              <span>Hot deal!</span>
+              <img
+                src="public/images/img_work_1.svg"
+                alt="Work 1"
+                class="work-1"
+              />
+            </button>
+            <h2>Join Vubavuba as a Merchant</h2>
+            <p>
+              Expand your reach, gain more customers, and grow your business
+              with us.
+            </p>
+          </div>
+          <div class="company-registration" id="form" style="z-index: 100">
+            <h2>REGISTER COMPANY</h2>
+            <form>
+              <div class="form-group">
+                <label for="company-name">Company Name</label>
+                <input
+                  type="text"
+                  id="company-name"
+                  name="company-name"
+                  placeholder="Enter your company name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="company-email">Email</label>
+                <input
+                  type="email"
+                  id="company-email"
+                  name="company-email"
+                  placeholder="Enter your company email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="company-phone">Phone Number</label>
+                <input
+                  type="text"
+                  id="company-phone"
+                  name="company-phone"
+                  placeholder="Enter your company phone number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="company-doc">Upload Registration Document</label>
+                <input type="file" id="company-doc" name="company-doc" />
+              </div>
+              <div class="form-group">
+                <label for="company-address">Address</label>
+                <textarea
+                  id="company-address"
+                  name="company-address"
+                  placeholder="Enter your company address"
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <div class="insights">
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button class="tab-link active" data-tab="requirements">
+              📌 Requirements
+            </button>
+            <button class="tab-link" data-tab="benefits">💼 Benefits</button>
+            <button class="tab-link" data-tab="success">
+              🌍 Success Story
+            </button>
+          </div>
+
+          <div id="requirements" class="tab-content active">
+            <div class="content-box">
+              <img src="public/images/1K6A9457.jpg" alt="Requirements" />
+              <div class="content-text">
+                <h3>What You Need</h3>
+                <p>Here are the key requirements to work with us:</p>
+                <ul>
+                  <li>✔️ Company registration certificate</li>
+                  <li>✔️ Company address</li>
+                  <li>✔️ Niche of sales</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div id="benefits" class="tab-content">
+            <div class="content-box">
+              <div class="content-text">
+                <h3>Why Work With Us?</h3>
+                <p>
+                  Our company is built around
+                  <strong>growth, flexibility, and success</strong>. Here’s what
+                  you gain:
+                </p>
+                <div class="icon-list">
+                  <div class="icon-item">
+                    <span class="icon">✔</span>
+                    Career Growth: We invest in your skills
+                    with mentorship and training.
+                  </div>
+                  <div class="icon-item">
+                    <span class="icon">✔</span>
+                    Work Flexibility: Enjoy a hybrid work
+                    environment with a great work-life balance.
+                  </div>
+                  <div class="icon-item">
+                    <span class="icon">✔</span>
+                    Innovation-Driven Culture: Work on
+                    cutting-edge technology with a supportive team.
+                  </div>
+                  <div class="icon-item">
+                    <span class="icon">✔</span>
+                   Recognition & Rewards: Your achievements
+                    are celebrated, and performance is well compensated.
+                  </div>
+                </div>
+              </div>
+              <img src="public/images/1K6A9524.jpg" alt="Benefits" />
+            </div>
+          </div>
+
+          <div id="success" class="tab-content">
+            <div class="content-box">
+              <img src="public/images/1K6A9563.jpg" alt="Success" />
+              <div class="content-text">
+                <h3>Our Impact in Rwanda</h3>
+                <p>
+                  We have successfully introduced our services in Rwanda,
+                  transforming businesses and communities with technology.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <section class="success-section">
+        <div class="container">
+          <h2 class="title">Our Operational Success</h2>
+          <p class="intro">
+            At <strong>VUBA</strong>, we turn vision into reality. Our seamless
+            execution, data-driven strategies, and commitment to excellence have
+            propelled us to success. Here's how we've made an impact:
+          </p>
+          <div class="success-grid">
+            <div class="success-card">
+              <h3>🚀 100+ Successful Projects</h3>
+              <p>
+                From innovative software solutions to cutting-edge analytics,
+                our team has delivered over 100 projects with outstanding client
+                satisfaction.
+              </p>
+            </div>
+            <div class="success-card">
+              <h3>📈 95% Client Retention</h3>
+              <p>
+                Our expertise and tailored solutions keep our clients coming
+                back, building long-term partnerships based on trust and
+                results.
+              </p>
+            </div>
+            <div class="success-card">
+              <h3>🌍 Expanding Across Africa</h3>
+              <p>
+                We are making a mark beyond Rwanda, bringing technological
+                advancements to multiple African nations, transforming
+                businesses and communities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <div class="faq-section" id="faq">
+        <img src="public/images/leaves.png" alt="Leaves Image" class="leaves" />
+        <h2>Frequently Ask Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              How does Vuba Vuba work with partners?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Getting your local business registered on our app is simple.
+                Just complete the
+                <a href="#form" style="display: inline; color: blue">form</a>
+                available.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              How long does it take?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>3-5 working days.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              How will I manage my orders?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Upon successful registration, you will get access to our
+                merchant platform to ease your work.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="public/images/img_graphic_elements.png"
+          alt="Leaves Image"
+          class="dots"
+        />
+      </div>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <img src="public/images/img_vvlogo_2_1.png" alt="Company Logo" />
+              <p>Your order we deliver</p>
+            </div>
+            <p>
+              Vuba Vuba brings what you need to your doorstep in record time.
+              Experience the joy of hassle-free delivery with us!
+            </p>
+            <a
+              href="https://certification.dbi.rw/public?name=Vuba%20Vuba%20Africa%20LTD"
+              target="_blank"
+              ><div class="seal">
+                <img src="public/images/seal.svg" alt="Seal" srcset="" />
+                <p>Trust Seal VALID!</p>
+              </div></a
+            >
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#discover">Discover</a></li>
+              <li><a href="#download">Download</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: info@vuba.com</p>
+            <p>Phone: +250 786 7890</p>
+            <p>Address: Kampala, Uganda</p>
+            <div class="social-icons">
+              <a href="#" title="Facebook"
+                ><img src="public/images/facebook-f-brands-solid.svg"
+              /></a>
+
+              <a href="#" title="Twitter"
+                ><img src="public/images/linkedin-in-brands-solid.svg" alt=""
+              /></a>
+
+              <a href="#" title="Instagram"
+                ><img src="public/images/youtube-brands-solid.svg" alt=""
+              /></a>
+
+              <a href="#" title="LinkedIn"
+                ><img src="public/images/instagram-brands-solid.svg" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="payment-methods">
+          <h3>We Accept:</h3>
+          <img src="public/images/mtnmoney (1).png" alt="Momo" />
+          <img src="public/images/wallet.svg" alt="Wallet" />
+          <img src="public/images/visa.svg" alt="Visa" />
+          <img src="public/images/mastercard.svg" alt="MasterCard" />
+          <img src="public/images/cod.svg" alt="COD" />
+          <img src="public/images/airtel.svg" alt="Airtel" />
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 VUBAVUBA. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.querySelectorAll(".tab-link").forEach((button) => {
+        button.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-link")
+            .forEach((btn) => btn.classList.remove("active"));
+          document
+            .querySelectorAll(".tab-content")
+            .forEach((tab) => tab.classList.remove("active"));
+
+          button.classList.add("active");
+          document
+            .getElementById(button.getAttribute("data-tab"))
+            .classList.add("active");
+        });
+      });
+    </script>
+    <script>
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const icon = item.querySelector(".icon");
+        item.addEventListener("click", () => {
+          // Close other open items
+          faqItems.forEach((i) => {
+            if (i !== item) {
+              i.classList.remove("open");
+              i.querySelector(".icon").textContent = "+";
+            }
+          });
+          // Toggle the clicked item
+          item.classList.toggle("open");
+          icon.textContent = item.classList.contains("open") ? "×" : "+";
+        });
+      });
+    </script>
+  </body>
+</html>
