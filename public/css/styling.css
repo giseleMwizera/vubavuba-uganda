@@ -714,28 +714,33 @@ padding-top: 3em;
 /* Background Shape */
 .image-bg {
   position: absolute;
-  width: 140%;
-  height: 100%;
-  background: linear-gradient(135deg, #008f436d, #00c8536f);
-  clip-path: ellipse(80% 60% at center);
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(85deg, #008f436d, #00c8536f);
+  clip-path: ellipse(80% 90% at center);
   z-index: 0;
-  top: 10px;
-  left: -20%;
-  opacity: 0.9;
+  top: 30%;
+  left: -15%;
+  opacity: 0.4;
   border-radius: 50%;
 }
 
 /* Image */
 .option-image {
   position: relative;
-  width: 85%;
-  height: 85%;
+  width: 150%;
+  height: 100%;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, */
+    /* rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
   /* clip-path: ellipse(80% 60% at center); */
-  object-fit: cover;
+  /* object-fit: cover; */
   z-index: 100;
+}
+
+.riderr {
+  /* height: 120%; */
+width: 500px !important;
 }
 
 /* Content */

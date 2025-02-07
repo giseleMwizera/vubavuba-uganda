@@ -107,7 +107,7 @@
           <div class="section__info">
             <div class="section__info-column">
               <button class="section__info-button">
-                <span> Your order is here</span>
+                <span> Your order we deliver.</span>
                 <img
                   src="public/images/img_work_1.svg"
                   alt="Work 1"
@@ -131,7 +131,7 @@
                 </a>
                 <a
                   class="section__info-action-button--demo"
-                  href="https://www.youtube.com/watch?v=aDJ6TaHThLc&ab_channel=VubaVubaAfrica"
+                  href="https://www.youtube.com/@VubaVubaAfrica"
                   target="_blank"
                 >
                   <img
@@ -193,7 +193,7 @@
           <img src="public/images/vuba-vuba-download.png" alt="" />
         </div>
         <div class="right-column">
-          <span class="tag"> Download our app </span>
+          <span href="" target="_blank" id="app-link" class="tag"> Download our app </span>
           <div class="headerr">
             <p>Make orders from your phone</p>
           </div>
@@ -227,7 +227,7 @@
           <div class="option-card merchant">
             <div class="image-container">
               <img
-                src="public/images/1K6A9922.jpg"
+                src="public/images/Merchant.png"
                 alt="Merchant"
                 class="option-image"
               />
@@ -245,9 +245,9 @@
           <div class="option-card rider">
             <div class="image-container">
               <img
-                src="public/images/1K6A9336.jpg"
+                src="public/images/1K6A9336.png"
                 alt="Rider"
-                class="option-image"
+                class="riderr option-image"
               />
               <div class="image-bg"></div>
             </div>
@@ -533,6 +533,17 @@
         </div>
       </footer>
     </div>
+    <script>
+  window.onload = function() {
+    var appLink = document.getElementById('app-link');
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android/i.test(userAgent)) {
+      appLink.href = 'https://play.google.com/store/apps/details?id=com.esicia.vubaba&pli=1';
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      appLink.href = 'https://apps.apple.com/us/app/vuba-vuba/id1492871841';
+    }
+  }
+</script>
     <script>
       function toggleMenu() {
         var menu = document.getElementById("menu");
