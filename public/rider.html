@@ -120,10 +120,7 @@
               />
             </button>
             <h2>Join Vubavuba as a Rider</h2>
-            <p>
-              Expand your reach, gain more customers, and grow your career
-              with us.
-            </p>
+            <p>Expand your reach and grow with us.</p>
           </div>
           <div class="company-registration" id="form" style="z-index: 100">
             <h2>Join as a rider</h2>
@@ -156,23 +153,25 @@
                 />
               </div>
               <div class="form-group">
-                <label for="business-type">What is your business type:</label>
+                <label for="business-type">Mode of transport:</label>
                 <select name="choice" id="business-type">
-                  <option value="" selected>Select your company type</option>
-                  <option value="restaurant">Motorbike</option>
-                  <option value="florist">Bicycle</option>
+                  <option value="" selected>
+                    Select your mode of transport
+                  </option>
+                  <option value="motorbike">Motorbike</option>
+                  <option value="bicycle">Bicycle</option>
                 </select>
               </div>
-               <div class="form-group">
+              <div class="form-group">
                 <label for="business-type">Do you own a smartphone:</label>
                 <select name="choice" id="business-type">
                   <option value="yes" selected>Yes</option>
                   <option value="no">No</option>
-                 
                 </select>
               </div>
-              <div class="form-group">
-                <div for="company-doc">Upload your ID</div>
+              <div class="form-group special">
+               <div class="left">
+                 <div for="company-doc">Upload your ID</div>
 
                 <label for="file-upload" class="upload-btn">
                   <svg viewBox="0 0 24 24">
@@ -184,18 +183,48 @@
                 </label>
 
                 <input type="file" id="file-upload" class="file-input" />
+               </div>
+               <div class="right">
+                 <div for="company-doc" style=" width: 100%;">Upload your Driving licence</div>
+
+                <label for="file-upload" class="upload-btn">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M14 14v7h-4v-7H5l7-7 7 7h-5zM5 20h14v2H5v-2z"
+                    ></path>
+                  </svg>
+                  Upload Licence
+                </label>
+
+                <input type="file" id="file-upload" class="file-input" />
+               </div>
               </div>
               <div class="form-group">
                 <label for="company-address">Address</label>
+                <select name="choice" id="company-address">
+                  <option value="" selected>
+                    What is your company address
+                  </option>
+                  <option value="kampala">Kampala</option>
+                  <option value="entebbe">Entebbe</option>
+                  <option value="jinja">Jinja</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="company-address"
+                  >(Optional) Any additional comments</label
+                >
                 <textarea
-                  id="company-address"
-                  name="company-address"
-                  placeholder="Enter your company address"
+                  id="comments"
+                  name="comments"
+                  placeholder="Please enter any additional comments"
                 ></textarea>
               </div>
               <div class="submit">
                 <button type="submit" class="submit-btn">Submit</button>
               </div>
+            
             </form>
           </div>
         </div>
@@ -220,6 +249,7 @@
                 <p>Here are the key requirements to work with us:</p>
                 <ul>
                   <li>✔️ Have an valid national ID</li>
+                  <li>✔️ Have a driving licence</li>
                   <li>✔️ Own a smartphone</li>
                   <li>✔️ Own a bike/motorbike</li>
                 </ul>
@@ -229,46 +259,62 @@
 
           <div id="benefits" class="tab-content">
             <div class="content-box">
-            <div class="content-text">
-    <h3 style="margin-bottom: 0.5em;">Why Become a Vuba Vuba Rider?</h3>
-    <p style="line-height: 1.7em;">
-        Join Vuba Vuba as a rider and enjoy the freedom to earn on your own schedule. Whether you're looking for a full-time job or a side hustle, we provide the best opportunities to help you succeed.
-    </p>
-    <div class="icon-list">
-        <div class="icon-item">
-            <span class="">✔</span>
-            <p style="line-height: 1.7em;">
-                <strong>Side-hustle:</strong> Work on given shifts and maximise your day.
-            </p>
-        </div>
-        <div class="icon-item">
-            <span class="">✔</span>
-            <p style="line-height: 1.7em;">
-                <strong>Competitive Earnings:</strong> Get paid per delivery, with bonuses and incentives.
-            </p>
-        </div>
-        <div class="icon-item">
-            <span class="">✔</span>
-            <p style="line-height: 1.7em;">
-                <strong>Instant & Secure Payments:</strong> Receive your earnings reliably with a transparent payment system.
-            </p>
-        </div>
+              <div class="content-text">
+                <h3 style="margin-bottom: 0.5em">
+                  Why Become a Vuba Vuba Rider?
+                </h3>
+                <p style="line-height: 1.7em">
+                  Whether you're looking for a full-time job
+                  or a side hustle, we got you.
+                </p>
+                <div class="icon-list">
+                  <div class="icon-item">
+                    <span class="">✔</span>
+                    <p style="line-height: 1.7em">
+                      Side-hustle while you work in shifs
+                    </p>
+                      <!-- <p style="line-height: 1.7em">
+                      <strong>Side-hustle:</strong> Work on given shifts and
+                      maximise your day.
+                    </p> -->
+                  </div>
+                  <div class="icon-item">
+                    <span class="">✔</span>
+                    <p style="line-height: 1.7em">
+                    Competitive Earnings, get paid per delivery.
+                    </p>
+                    <!-- <p style="line-height: 1.7em">
+                      <strong>Competitive Earnings:</strong> Get paid per
+                      delivery, with bonuses and incentives.
+                    </p> -->
+                  </div>
+               
 
-        <div class="icon-item">
-            <span class="">✔</span>
-            <p style="line-height: 1.7em;">
-                <strong>Easy Sign-Up & Support:</strong> Get started quickly with a hassle-free registration process and 24/7 rider support.
-            </p>
-        </div>
-        <div class="icon-item">
-            <span class="">✔</span>
-            <p style="line-height: 1.7em;">
-                <strong>Real-Time Navigation:</strong> Our app provides optimized routes, reducing wait times and maximizing efficiency.
-            </p>
-        </div>
-    </div>
-</div>
+                  <div class="icon-item">
+                    <span class="">✔</span>
+                    <p style="line-height: 1.7em">
+                      Easy Sign-Up & Support
+                    </p>
 
+                        <!-- <p style="line-height: 1.7em">
+                      <strong>Easy Sign-Up & Support:</strong> Get started
+                      quickly with a hassle-free registration process and 24/7
+                      rider support.
+                    </p> -->
+                  </div>
+                  <div class="icon-item">
+                    <span class="">✔</span>
+                    <p style="line-height: 1.7em">
+                      Real-Time Navigation with optimised routes
+                    </p>
+                        <!-- <p style="line-height: 1.7em">
+                      <strong>Real-Time Navigation:</strong> Our app provides
+                      optimized routes, reducing wait times and maximizing
+                      efficiency.
+                    </p> -->
+                  </div>
+                </div>
+              </div>
 
               <img src="public/images/1K6A9524.jpg" alt="Benefits" />
             </div>
@@ -289,7 +335,7 @@
         </div>
       </div>
 
-<!-- <section class="success-section">
+      <!-- <section class="success-section">
         <div class="container">
           <h2 class="title">Our Operational Success</h2>
           <p class="intro">
@@ -324,7 +370,8 @@
             </div>
           </div>
         </div>
-      </section> --> -->
+      </section> -->
+   
       <div class="faq-section" id="faq">
         <img src="public/images/leaves.png" alt="Leaves Image" class="leaves" />
         <h2>Frequently Ask Questions</h2>
@@ -371,7 +418,7 @@
           class="dots"
         />
       </div>
-      <footer class="footer">
+         <footer class="footer">
         <div class="footer-container">
           <div class="footer-section">
             <div class="footer-logo">
@@ -382,24 +429,23 @@
               Vuba Vuba brings what you need to your doorstep in record time.
               Experience the joy of hassle-free delivery with us!
             </p>
-            <a
+            <!-- <a
               href="https://certification.dbi.rw/public?name=Vuba%20Vuba%20Africa%20LTD"
               target="_blank"
               ><div class="seal">
                 <img src="public/images/seal.svg" alt="Seal" srcset="" />
                 <p>Trust Seal VALID!</p>
               </div></a
-            >
+            > -->
           </div>
 
           <div class="footer-section">
-            <h3>Quick Links</h3>
+            <h3>Useful Links</h3>
             <ul>
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#discover">Discover</a></li>
-              <li><a href="#download">Download</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#hero">Terms & conditions</a></li>
+              <li><a href="#discover">Privacy policy</a></li>
+              <li><a href="#download">Refund policy</a></li>
+            
             </ul>
           </div>
 
@@ -409,19 +455,19 @@
             <p>Phone: +250 786 7890</p>
             <p>Address: Kampala, Uganda</p>
             <div class="social-icons">
-              <a href="#" title="Facebook"
+              <a href="https://www.facebook.com/vubavubarw/" title="Facebook"
                 ><img src="public/images/facebook-f-brands-solid.svg"
               /></a>
 
-              <a href="#" title="Twitter"
+              <a href="https://x.com/vubavubarw/" title="Twitter"
                 ><img src="public/images/linkedin-in-brands-solid.svg" alt=""
               /></a>
 
-              <a href="#" title="Instagram"
+              <a href="https://www.instagram.com/vubavubarw/?hl=en" title="Instagram"
                 ><img src="public/images/youtube-brands-solid.svg" alt=""
               /></a>
 
-              <a href="#" title="LinkedIn"
+              <a href="https://www.linkedin.com/company/vubavuba/?originalSubdomain=rw" title="LinkedIn"
                 ><img src="public/images/instagram-brands-solid.svg" alt=""
               /></a>
             </div>

@@ -232,6 +232,10 @@ background-color: #85e6b50f;
   align-items: center;
   overflow: hidden;
 }
+.merchant .contact-section {
+  background: url("./../public/images/Merchant.png") center/cover no-repeat;
+
+}
 .rider .contact-section {
 
   background: url("./../public/images/1K6A9336.jpg") center/cover no-repeat;
@@ -252,10 +256,13 @@ background-color: #85e6b50f;
   z-index: 1;
 }
 
-.rider .contact-section::before ,.merchant .contact-section::before {
-  background: rgba(0, 0, 0, 0.208);
+.rider .contact-section::before {
+  background: rgba(0, 0, 0, 0.642);
 }
 
+.merchant .contact-section::before {
+ background: rgba(0, 0, 0, 0.532);
+}
 .contact-section .contact-container {
   position: relative;
   display: flex;
@@ -271,7 +278,7 @@ padding-top: 3em;
 }
 
 .merchant .contact-section .company-registration, .rider .contact-section .company-registration {
-  flex: 0.4;
+  flex: 0.5;
   padding: 30px 20px;
   background: #ffffff;
   /* border-radius: 0 15px 15px 0; */
@@ -296,7 +303,9 @@ padding-top: 3em;
 .rider .contact-section .contact-text p, 
 .merchant .contact-section .contact-text p 
 {
-  width: 70%;
+  padding-top: 0.5em;
+  width: 100%;
+
 }
 .contact-section .contact-text {
   flex: 0.5;
@@ -595,7 +604,14 @@ padding-top: 3em;
   width: 90%;
   margin: 0 auto;
 }
+.company-registration .form-group.special {
+ display: flex;
+ /* background-color: red; */
 
+}
+.company-registration .form-group.special div {
+  width: 50%;
+}
 .company-registration .form-group label {
   display: block;
   font-weight: bold;
@@ -795,19 +811,20 @@ width: 500px !important;
   /* height: 10vh; */
   color: #008f42;
   margin-bottom: 15px;
-  padding: 30px 0;
+  padding: 30px 0 0 0;
   font-weight: bold;
   text-align: center;
 }
 
-/* .where-we-are .header p {
+.where-we-are .headerr p {
     font-size: 18px;
-    color: #4a6f50;
+    color: #7c7c7c;
     margin-bottom: 40px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-} */
+    padding-bottom: 2em;
+}
 
 /* Locations Container */
 .where-we-are .locations {
@@ -879,7 +896,7 @@ width: 500px !important;
 .tab-container {
   width: 80vw;
   margin: auto;
-    background: #008f43bf;
+    background: #008f43e8;
     color: white;
   border-radius: 10px;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -974,6 +991,21 @@ height: 30vh;
   padding-left: 30px;
 
 }
+
+.content-text .company-profile {
+background-color: white;
+color: #008f42;
+padding: 10px 30px;
+width: 14vw;
+margin-top: 3em;
+border-radius: 3px;
+cursor: pointer;
+}
+.content-text .company-profile:hover {
+background-color: #e2e2e2;
+}
+
+
  .content-box .content-text h3{
 font-size: 2.5em;
 }
@@ -989,7 +1021,8 @@ font-size: 2.5em;
 
 .icon-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   gap: 15px;
   margin-top: 10px;
 }

@@ -81,7 +81,7 @@
     </script>
     <script type="module" src="./js/index.js"></script>
   </head>
-  
+
   <body>
     <nav class="navbar">
       <!-- Logo -->
@@ -311,27 +311,34 @@
       </section>
       <section class="where-we-are">
         <div class="headerr">
-          <h2>Where We Are</h2>
-          <!-- <p>Expanding our presence and making an impact in various regions.</p> -->
+          <h2>Spot Us Here</h2>
+          <p>Rooted in Vubavuba, Thriving in Uganda</p>
         </div>
-
         <div class="locations">
           <div class="location-card">
-            <span class="location-tag">Uganda</span>
+            <!-- <span class="location-tag">Uganda</span> -->
             <img src="public/images/kampala.webp" alt="Uganda" />
             <div class="location-info">
               <h3>Kampala</h3>
               <!-- <p>Our headquarters is located in Kigali, the heart of Rwanda.</p> -->
             </div>
           </div>
-
           <!-- Location 2 -->
           <div class="location-card">
-            <span class="location-tag">Uganda</span>
+            <!-- <span class="location-tag">Uganda</span> -->
             <img src="public/images/entebbe.webp" alt="Entebbe" />
             <div class="location-info">
               <h3>Entebbe</h3>
               <!-- <p>A growing hub for our innovative solutions and expansion.</p> -->
+            </div>
+          </div>
+
+          <div class="location-card">
+            <!-- <span class="location-tag">Uganda</span> -->
+            <img src="public/images/Jinja-city.jpg" alt="Jinja" />
+            <div class="location-info">
+              <h3>Jinja</h3>
+              <!-- <p>Our headquarters is located in Kigali, the heart of Rwanda.</p> -->
             </div>
           </div>
         </div>
@@ -473,24 +480,23 @@
               Vuba Vuba brings what you need to your doorstep in record time.
               Experience the joy of hassle-free delivery with us!
             </p>
-            <a
+            <!-- <a
               href="https://certification.dbi.rw/public?name=Vuba%20Vuba%20Africa%20LTD"
               target="_blank"
               ><div class="seal">
                 <img src="public/images/seal.svg" alt="Seal" srcset="" />
                 <p>Trust Seal VALID!</p>
               </div></a
-            >
+            > -->
           </div>
 
           <div class="footer-section">
-            <h3>Quick Links</h3>
+            <h3>Useful Links</h3>
             <ul>
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#discover">Discover</a></li>
-              <li><a href="#download">Download</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#hero">Terms & conditions</a></li>
+              <li><a href="#discover">Privacy policy</a></li>
+              <li><a href="#download">Refund policy</a></li>
+            
             </ul>
           </div>
 
@@ -500,19 +506,19 @@
             <p>Phone: +250 786 7890</p>
             <p>Address: Kampala, Uganda</p>
             <div class="social-icons">
-              <a href="#" title="Facebook"
+              <a href="https://www.facebook.com/vubavubarw/" title="Facebook"
                 ><img src="public/images/facebook-f-brands-solid.svg"
               /></a>
 
-              <a href="#" title="Twitter"
+              <a href="https://x.com/vubavubarw/" title="Twitter"
                 ><img src="public/images/linkedin-in-brands-solid.svg" alt=""
               /></a>
 
-              <a href="#" title="Instagram"
+              <a href="https://www.instagram.com/vubavubarw/?hl=en" title="Instagram"
                 ><img src="public/images/youtube-brands-solid.svg" alt=""
               /></a>
 
-              <a href="#" title="LinkedIn"
+              <a href="https://www.linkedin.com/company/vubavuba/?originalSubdomain=rw" title="LinkedIn"
                 ><img src="public/images/instagram-brands-solid.svg" alt=""
               /></a>
             </div>
@@ -534,16 +540,20 @@
       </footer>
     </div>
     <script>
-  window.onload = function() {
-    var appLink = document.getElementById('app-link');
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/android/i.test(userAgent)) {
-      appLink.href = 'https://play.google.com/store/apps/details?id=com.esicia.vubaba&pli=1';
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      appLink.href = 'https://apps.apple.com/us/app/vuba-vuba/id1492871841';
-    }
-  }
-</script>
+      window.onload = function () {
+        var appLink = document.getElementById("app-link");
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        if (/android|Windows NT/i.test(userAgent)) {
+          appLink.href =
+            "https://play.google.com/store/apps/details?id=com.esicia.vubaba&pli=1";
+        } else if (
+          /iPad|iPhone|Macintosh|iPod/.test(userAgent) &&
+          !window.MSStream
+        ) {
+          appLink.href = "https://apps.apple.com/us/app/vuba-vuba/id1492871841";
+        }
+      };
+    </script>
     <script>
       function toggleMenu() {
         var menu = document.getElementById("menu");

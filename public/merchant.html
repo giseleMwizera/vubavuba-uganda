@@ -158,11 +158,19 @@
               <div class="form-group">
                 <label for="business-type">What is your business type:</label>
                 <select name="choice" id="business-type">
-                  <option value="" selected>Select your company type</option>
+                  <option value="demo" selected>
+                    Select your company type
+                  </option>
                   <option value="restaurant">Restaurant</option>
+                  <option value="pharma">Pharma & Cosmetics</option>
+                  <option value="market">Market & Bakeries</option>
                   <option value="florist">Vuba Florist</option>
-                  <option value="third">Pharma & Cosmetics</option>
-                  <option value="third">Market & Bakeries</option>
+                  <option value="party">Vuba Party</option>
+                  <option value="electronics">Electronics</option>
+                  <option value="mtn">MTN Smartphone Market</option>
+                  <option value="upcountry">Upcountry Pickup</option>
+                  <option value="pets">Pets Store</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
               <div class="form-group">
@@ -179,12 +187,25 @@
 
                 <input type="file" id="file-upload" class="file-input" />
               </div>
+
               <div class="form-group">
                 <label for="company-address">Address</label>
+                <select name="choice" id="company-address">
+                  <option value="" selected>
+                    What is your company address
+                  </option>
+                  <option value="kampala">Kampala</option>
+                  <option value="entebbe">Entebbe</option>
+                  <option value="jinja">Jinja</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+      <div class="form-group">
+                <label for="company-address">(Optional) Any additional comments</label>
                 <textarea
-                  id="company-address"
-                  name="company-address"
-                  placeholder="Enter your company address"
+                  id="comments"
+                  name="comments"
+                  placeholder="Please enter any additional comments"
                 ></textarea>
               </div>
               <div class="submit">
@@ -224,52 +245,66 @@
           <div id="benefits" class="tab-content">
             <div class="content-box">
               <div class="content-text">
-                <h3 style="margin-bottom: 0.5em;">Why Partner with us?</h3>
-                <p style="line-height: 1.7em;">
-                  At Vuba Vuba, we empower businesses and couriers with the
-                  tools and support needed to thrive in the fast-growing
-                  delivery industry. Here's what makes working with us an
+                <h3 style="margin-bottom: 0.5em">Why Partner with us?</h3>
+                <p style="line-height: 1.7em">
+                  Here's what makes working with us an
                   excellent choice:
                 </p>
                 <div class="icon-list">
                   <div class="icon-item">
                     <span class="">✔</span>
-                    <p style="line-height: 1.7em;">
+                    <p style="line-height: 1.7em">
+                      Boost Your Sales
+                    </p> 
+                     <!-- <p style="line-height: 1.7em">
+
                       Boost Your Sales:Expand your customer reach and increase
                       orders with our seamless platform.
-                    </p>
+                    </p> -->
                   </div>
                   <div class="icon-item">
                     <span class="">✔</span>
-                    <p style="line-height: 1.7em;"> 
+                    <p style="line-height: 1.7em">
+                      Flexible Work Opportunities
+                    </p> 
+                    <!-- <p style="line-height: 1.7em">
                       <strong>Flexible Work Opportunities:</strong> Whether
                       you're a restaurant, grocery store, or a rider, enjoy
                       flexible working hours and the ability to earn on your
                       terms.
-                    </p>
+                    </p> -->
                   </div>
                   <div class="icon-item">
                     <span class="">✔</span>
-                    <p style="line-height: 1.7em;">
+                    <p style="line-height: 1.7em">
+                      Reliable Payment System
+                    </p>
+                    <!-- <p style="line-height: 1.7em">
                       <strong>Reliable Payment System:</strong> Get paid
-                      securely and on time with transparent earnings tracking.
-                    </p>
+                      securely and on time with transparent earnings tracking. -->
+                    <!-- </p> -->
                   </div>
                   <div class="icon-item">
                     <span class="">✔</span>
-                    <p style="line-height: 1.7em;">
+                    <p style="line-height: 1.7em">
+                      Efficient Delivery Network
+                    </p>
+                        <!-- <p style="line-height: 1.7em">
                       <strong>Efficient Delivery Network:</strong> We provide
                       optimized routes and real-time tracking to ensure fast,
                       smooth deliveries.
-                    </p>
+                    </p> -->
                   </div>
                   <div class="icon-item">
                     <span class="">✔</span>
-                    <p style="line-height: 1.7em;">
+                    <p style="line-height: 1.7em">
+                      Dedicated Support
+                    </p>
+                      <!-- <p style="line-height: 1.7em">
                       <strong>Dedicated Support:</strong> Our team is available
                       to assist with any challenges, ensuring a hassle-free
                       experience.
-                    </p>
+                    </p> -->
                   </div>
                 </div>
               </div>
@@ -287,6 +322,7 @@
                   We have successfully introduced our services in Rwanda,
                   transforming businesses and communities with technology.
                 </p>
+                <a href="#" class="company-profile">Our company profile</a>
               </div>
             </div>
           </div>
@@ -375,7 +411,7 @@
           class="dots"
         />
       </div>
-      <footer class="footer">
+       <footer class="footer">
         <div class="footer-container">
           <div class="footer-section">
             <div class="footer-logo">
@@ -386,24 +422,23 @@
               Vuba Vuba brings what you need to your doorstep in record time.
               Experience the joy of hassle-free delivery with us!
             </p>
-            <a
+            <!-- <a
               href="https://certification.dbi.rw/public?name=Vuba%20Vuba%20Africa%20LTD"
               target="_blank"
               ><div class="seal">
                 <img src="public/images/seal.svg" alt="Seal" srcset="" />
                 <p>Trust Seal VALID!</p>
               </div></a
-            >
+            > -->
           </div>
 
           <div class="footer-section">
-            <h3>Quick Links</h3>
+            <h3>Useful Links</h3>
             <ul>
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#discover">Discover</a></li>
-              <li><a href="#download">Download</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#hero">Terms & conditions</a></li>
+              <li><a href="#discover">Privacy policy</a></li>
+              <li><a href="#download">Refund policy</a></li>
+            
             </ul>
           </div>
 
@@ -413,19 +448,19 @@
             <p>Phone: +250 786 7890</p>
             <p>Address: Kampala, Uganda</p>
             <div class="social-icons">
-              <a href="#" title="Facebook"
+              <a href="https://www.facebook.com/vubavubarw/" title="Facebook"
                 ><img src="public/images/facebook-f-brands-solid.svg"
               /></a>
 
-              <a href="#" title="Twitter"
+              <a href="https://x.com/vubavubarw/" title="Twitter"
                 ><img src="public/images/linkedin-in-brands-solid.svg" alt=""
               /></a>
 
-              <a href="#" title="Instagram"
+              <a href="https://www.instagram.com/vubavubarw/?hl=en" title="Instagram"
                 ><img src="public/images/youtube-brands-solid.svg" alt=""
               /></a>
 
-              <a href="#" title="LinkedIn"
+              <a href="https://www.linkedin.com/company/vubavuba/?originalSubdomain=rw" title="LinkedIn"
                 ><img src="public/images/instagram-brands-solid.svg" alt=""
               /></a>
             </div>
