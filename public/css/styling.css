@@ -202,6 +202,7 @@ background-color: #85e6b50f;
   padding: 10px;
   border-radius: 5px;
   background-color: white;
+  cursor: pointer;
 }
 
 .download-section .right-column .description {
