@@ -1,15 +1,4 @@
-/*=========== TABLE OF CONTENTS ===========
-1. Button CSS
-2. Textarea CSS
-3. Input CSS
-4. Text CSS
-5. Heading CSS
-6. Container CSS
-==========================================*/
 
-/*-------------------------------------
-  1. Button CSS
---------------------------------------*/
 .ui.button.round {
   border-radius: var(--radius-md);
 }
